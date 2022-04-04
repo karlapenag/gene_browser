@@ -1,5 +1,6 @@
 gc()
-
+library(BiocManager)
+options(repos = BiocManager::repositories())
 library(shiny)
 library(shinythemes)
 library(rio)
