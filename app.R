@@ -24,8 +24,8 @@ names(variants_data)[names(variants_data) == "gene_name"] <- "Gene_name"
 names(variants_data)[names(variants_data) == "gwas-associations"] <- "Gwas_Association"
 
 ui <- 
-  navbarPage("Demo", collapsible = TRUE, inverse = TRUE, theme = shinytheme("united"),
-             tabPanel("All data",
+  navbarPage("App", collapsible = TRUE, inverse = TRUE, theme = shinytheme("united"),
+             tabPanel("All-data",
                       sidebarLayout(
                         sidebarPanel(
                           fileInput(
@@ -44,7 +44,7 @@ ui <-
                                      plotlyOutput(outputId = "all_data"),br(),br(),br(),p("The color of the marker is different for each chromosome."),
                                      p("The size of the marker is determined by the number of cases reported of a phenotype in that variant."),
                                      uiOutput("link")),
-                            tabPanel("All data table",dataTableOutput(outputId = "all_data_table")),
+                            tabPanel("All-data table",dataTableOutput(outputId = "all_data_table")),
                             type="tab"
                             )
                           ))),
@@ -65,7 +65,7 @@ ui <-
                                   mainPanel(
                                     plotlyOutput(outputId = "phenotypes" )
                                   ))),
-             tabPanel("Extra information",
+             tabPanel("Gene-browser",
                       fluidPage(
                         tabsetPanel(
                           tabPanel("Gene data",
