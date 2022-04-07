@@ -2,7 +2,7 @@
 Gene/variant/phenotype browser
 
 ## Dependencies
-library(BiocManager)
+library(BiocManager)/n
 options(repos = BiocManager::repositories())
 library(shiny)
 library(shinythemes)
